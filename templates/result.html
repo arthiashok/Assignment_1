@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}BTS {% endblock %}
+
+{% block content %}
+
+<div id="result">
+  <br>
+  <b>BTS &bull; ARMY<b>
+    <br><br>
+{{ result }}
+
+{% if result<25 %}
+</br></br></br></br></br></br>
+You are not a fan
+{% elif result<50 %}
+</br></br></br></br></br></br>
+You know BTS
+{% elif result<75 %}
+</br></br></br></br></br></br>
+You are an Army
+{% elif result>=75 %}
+</br></br></br></br></br></br>
+Your a mega Army
+{% endif %}
+</div>
+
+
+{% endblock %}

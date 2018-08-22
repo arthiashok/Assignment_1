@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block title %}BTS {% endblock %}
+
+
+{% block content %}
+
+<div id="header">
+
+  <br>
+  <b>BTS &bull; ARMY<b>
+    <br><br>
+    <img src="{{ url_for('static', filename='images') }}/bts.png" id="logo" />
+    <br><br>
+  <i> How well do you know BTS?</i>
+</div>
+
+<div id="table">
+  <form action="result" method="post">
+
+    <div id="members">
+      <h2>How many members are in BTS?</h2>
+      {% for member in members %}
+      <input type="radio" name="members" value="{{ member[0] }}" required="required"/>{{ member[0] }}
+      {% endfor %}
+    </div>
+
+    <div id="albums">
+      <h2>Which of these albums do you own?</h2>
+      <div id="album_grid">
+        {% for album in albums %}
+        <div>
+          <img src="{{ url_for('static', filename='images') }}/{{ album[2] }}" class="album" />
+           <input type="checkbox" id="album" value="album1" />
+          {{ album[0] }}<br />
+          {{ album[1] }}<br />
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div id="concerts">
+      <h2>What concerts have you attended?</h2>
+      {% for concert in concerts %}
+      {{ concert[0] }}<br><br>
+      <input type="checkbox" name="concert {{ concert[0] }}" value="true">
+      {% endfor %}
+    </div>
+
+    <div id="awards">
+      <h2>How many awards have BTS won?</h2>
+      {% for award in awards %}
+      <input type="radio" name="awards" value="{{ award[0] }}" required="required" />{{ award[0] }}
+      {% endfor %}
+    </div>
+
+    <input type="submit" class="button" value="Submit">
+
+  </form>
+
+  <script>
+
+    document.getElementById('album').addEventListener('click', function() {
+
+      if (this.style.outline == '') {
+
+        this.style.outline = '10px solid red';
+
+        document.getElementById('albums').checked = true;
+
+      }
+
+      else {
+
+        this.style.outline = '';
+
+        document.getElementById('albums').checked = false;
+
+      }
+
+    })
+
+  </script>
+
+</div>
+
+{% endblock %}

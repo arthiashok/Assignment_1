@@ -1,0 +1,159 @@
+/* google font import */
+
+@import url('https://fonts.googleapis.com/css?family=Monda');
+@import url('https://fonts.googleapis.com/css?family=Yellowtail');
+
+body {
+  background-image: url(Background.svg);
+  color: white;
+  font-family: 'Arial';
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  font-family: 'Arial';
+  font-size: 3em;
+  margin: 0;
+}
+
+h2 {
+    color: white;
+}
+
+/* id selector (one-off items) */
+
+#logo {
+  padding-left: 25px;
+  width:  50%;
+  height: auto;
+}
+
+#header {
+  background-position: top, bottom;
+  margin-bottom: 40px;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+#header i{
+font-size: 1rem;
+}
+
+#members {
+  background-size: 42px;
+  margin: auto;
+  max-width: 1140px;
+  padding: 20px 0;
+  padding-bottom: 2.5em;
+  opacity: 0.9;
+  text-align: center;
+}
+
+#albums {
+  background-size: 42px;
+  display: grid;
+  max-width: 1140px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  opacity: 0.9;
+  text-align: center;
+}
+
+#album .album{
+  width:90%;
+  height: auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#album_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+#album{
+  display: none;
+}
+
+#concerts {
+  background-size: 42px;
+  margin: auto;
+  max-width: 1140px;
+  padding: 20px 0;
+  padding-bottom: 2.5em;
+  opacity: 0.9;
+  text-align: center;
+}
+
+#awards {
+  background-size: 42px;
+  margin: auto;
+  max-width: 1140px;
+  padding: 20px 0;
+  padding-bottom: 2.5em;
+  opacity: 0.9;
+  text-align: center;
+}
+
+#result {
+  position: relative;
+  background-size: 42px;
+  margin: auto;
+  max-width: 1140px;
+  left: 100px;
+  opacity: 0.9;
+  text-align: center;
+}
+
+#footer {
+  color: white;
+  font-size: 0.8em;
+  padding: 1em;
+  text-align: center;
+}
+
+
+#table div {
+  grid-column: span 3;
+  margin: 0 1em;
+}
+
+#table div:nth-child(3) {
+  border-bottom: 3px solid #2A8;
+  border-top: 3px solid #2A8;
+}
+
+#table h1 {
+  grid-column: span 3;
+  padding-bottom: 0.3em;
+  text-align: center;
+}
+
+#table h2 {
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+#table .dor {
+  float: right;
+  padding-right: 1em;
+}
+
+@media only screen and (min-width: 720px) {
+
+  #table div {
+    grid-column: auto;
+    margin: 0;
+  }
+
+  #table div:nth-child(3) {
+    border: none;
+    /* border-left: 3px solid #2A8;
+    border-right: 3px solid #2A8; */
+  }
+
+}
